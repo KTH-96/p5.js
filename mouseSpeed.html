@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.min.js"></script>
+  </head>
+  <body>
+    <script>
+    function setup() {
+      createCanvas(windowWidth, windowHeight);
+      background(220);
+    }
+
+    function draw() {
+    var  px = pow(mouseX-pmouseX, 2);
+    var  py = pow(mouseY-pmouseY, 2);
+      speed = sqrt(px+py);
+      circle(mouseX, mouseY, speed);
+    }
+
+    function mousePressed(){
+      background(random(255),random(255),random(255));
+    }
+    </script>
+  </body>
+</html>
